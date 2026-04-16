@@ -1,0 +1,214 @@
+# 段永平投资问答录-下（投资逻辑篇）— 反例/失败模式/陷阱 提取结果
+# Extractor: counter-example-extractor
+# 处理时间: 2026-04-16
+# 候选数: 14
+
+- id: ce-001
+  title: "做空——无限风险的游戏"
+  type: counter_example
+  source_chapter: "第一章 第4节 Stop doing list · 不做空"
+  source_quote: "亏钱的投资有好几次了，多数都可以原谅，但有一次属于极度愚蠢，就是跑去short百度。之前投资表现非常好，有点飘飘然，真以为自己很厉害。开始还是想小玩玩，后来又不服输，最后被夹空而投降，所有账号加起来亏了很多钱，大概有1.5-2亿美金。"
+  summary: "做空看似是发现公司问题后的理性操作，实际上是面对无限风险的赌博。段永平本人因做空百度亏损1.5-2亿美金，这是他承认的最愚蠢的投资错误。"
+  failure_mode: "做空不仅需要对基本面判断正确，还必须对抗市场的疯狂。即使判断正确，也可能在市场回归理性之前因保证金压力而被迫平仓，导致巨额亏损甚至破产。"
+  mechanism: "做空时亏损是无限的（股价可以涨到任意高），而盈利最多100%。市场的非理性持续时间可能远超做空者资金能承受的期限。一旦开始亏损，不服输的心理会驱使加倍下注，形成恶性循环。"
+  warning_signs:
+    - "觉得某个公司股价过高，想要'空一把'"
+    - "已经做空并且亏损，但不愿止损"
+    - "认为自己比市场更聪明，可以精确判断泡沫破裂时间"
+  bound_to: ["stop-doing-list", "enterprise-owner-mindset"]
+  tags: [counter-example, short-selling, unlimited-risk, stop-doing-list]
+
+- id: ce-002
+  title: "使用杠杆/Margin——富人变穷的最快方式"
+  type: counter_example
+  source_chapter: "第一章 第4节 Stop doing list · 不用margin"
+  source_quote: "用margin的人一生也许只需要碰上一次市场向下的疯狂就可能被wiped out。芒格这么聪明的人就曾经因为margin而陷入大麻烦。巴菲特讲过，即使只有1%的机会破产的机会你也不应该干。"
+  summary: "使用杠杆（融资/保证金交易）是段永平反复警告的危险行为。即使判断正确，杠杆也会因市场短期波动导致被迫平仓，让人一夜归零。芒格本人也在70年代因margin险些出局。"
+  failure_mode: "杠杆放大收益的同时放大亏损。市场极端波动时券商可以强制平仓，投资者完全失去控制权。赚到钱时会形成路径依赖，胆子越来越大，最终在一次极端行情中被彻底消灭。"
+  mechanism: "margin的成瘾性极强——杠杆赚钱时人会产生'我很厉害'的错觉，加大杠杆力度；亏损时又面临被平仓的生死压力，被迫在最差时机卖出。巴菲特朋友用200%的margin做了30年，虽有天赋且非常努力，仍多次死里逃生，最终不得不'放下屠刀'。"
+  warning_signs:
+    - "觉得发现了'确定无疑'的机会，想借钱加码"
+    - "已经在用margin并且盈利，觉得'这次不一样'"
+    - "融资比例逐渐升高，认为可以控制风险"
+  bound_to: ["stop-doing-list", "opportunity-cost-framework"]
+  tags: [counter-example, leverage, margin, bankruptcy-risk, addiction]
+
+- id: ce-003
+  title: "不懂也投——85%投资者亏钱的首因"
+  type: counter_example
+  source_chapter: "第一章 第4节 Stop doing list · 不做不懂的东西"
+  source_quote: "这些年，我在投资里亏掉的美金数以亿计，每一笔都是违背老巴教导的情况下亏的，而赚到的大钱也都是在自己真正懂的地方赚的。买自己不懂的东西是为什么85%的人可以在牛市熊市都亏钱的原因。没有比因为股票涨了很多而买入更荒唐的理由了。"
+  summary: "买入自己不理解的东西是投资者亏钱的最普遍原因。段永平坦承自己亏掉的数亿美金全部来自违背'不懂不做'原则的交易，包括航空公司FRNT、天然气ETFUNG等。"
+  failure_mode: "投资者看到股价上涨或听到热门概念后，没有深入理解商业模式就匆忙买入。买入后股价下跌时无法判断是市场错误还是自己判断错误，最终在恐慌中割肉。"
+  mechanism: "人们常把'熟悉'等同于'理解'——听到某个行业名词觉得耳熟，就以为自己懂了。实际上真正理解一家公司需要能预判其未来5-10年的盈利能力。'不知道自己不知道什么'（we do not know what we do not know）是最危险的状态。"
+  warning_signs:
+    - "买入理由是'大家都在买'或'这个概念很火'"
+    - "无法用一句话说清楚这家公司怎么赚钱"
+    - "对公司的理解停留在新闻标题层面"
+  bound_to: ["competence-circle-framework", "stop-doing-list"]
+  tags: [counter-example, invest-without-understanding, 85%-loser, cognitive-bias]
+
+- id: ce-004
+  title: "盲目扩大能力圈——'扩展能力圈要付学费'的自欺"
+  type: counter_example
+  source_chapter: "第一章 第4节 不盲目扩大自己的能力圈"
+  source_quote: "不要轻易去'扩大'自己的能力圈。搞懂一个生意往往是需要很多年的，不要因为看到一两个概念就轻易跳进自己不熟悉的领域或地方，不然早晚会栽的。我经常看到有人跑到自己的能力圈以外去做事情，回头安慰自己的话就是'扩大能力圈'是要付学费的。"
+  summary: "投资者常以'扩展能力圈'为借口，追逐自己不理解的领域。段永平明确指出，搞懂一个生意需要很多年，能力圈的边界远比大小重要。"
+  failure_mode: "看到新行业或新概念的机会，仓促进入不熟悉的领域，然后以'交学费'合理化亏损，而不是承认自己根本不该进入。"
+  mechanism: "人性对新鲜事物有天然好奇心和占有欲。当看到别人在某个领域赚钱时，FOMO（错失恐惧）驱使人跳入自己不了解的领域。真正的能力圈扩张需要数年深耕，而非看几篇报告就能实现。段永平甚至认为一个人的能力圈在40岁以前基本就定了。"
+  warning_signs:
+    - "频繁关注自己从未涉足的行业"
+    - "用'交学费'来安慰投资亏损"
+    - "看了几篇研报就认为自己理解了整个行业"
+  bound_to: ["competence-circle-framework", "good-business-identifier"]
+  tags: [counter-example, competence-circle, overreach, self-deception]
+
+- id: ce-005
+  title: "频繁决策——投的企业越多赚得越少"
+  type: counter_example
+  source_chapter: "第一章 第4节 不频繁决策（less is more）"
+  source_quote: "不要一年做20个决策。1年做20个决策，肯定会出错，那不是价值投资。一辈子做20个投资决策就够了。你投的企业比我多多了？那你要小心了，一般而言，超出一定量以后，投的企业越多赚的越少。"
+  summary: "频繁交易和过多投资决策是投资者的大敌。段永平自己10年只看懂不到10家企业，重手投了5家，平均两年一家。他认为一辈子做20个投资决策就够了。"
+  failure_mode: "投资者频繁寻找新的投资标的，觉得不操作就是浪费时间。每次决策的质量因分散注意力而下降，最终总体回报远不如集中持有少数真正理解的好公司。"
+  mechanism: "人的认知带宽有限，同时跟踪太多公司必然导致每家都只了解皮毛。心理学上，频繁操作满足了'我在努力工作'的幻觉，但决策质量与数量成反比。芒格说伯克希尔去掉15个最好的决策就是平庸的。"
+  warning_signs:
+    - "持有超过10只以上的股票"
+    - "一年内有多次买卖操作"
+    - "觉得'不动'就是在浪费时间"
+  bound_to: ["concentrated-investment", "enterprise-owner-mindset"]
+  tags: [counter-example, overtrading, less-is-more, decision-quality]
+
+- id: ce-006
+  title: "短线投机——'常在河边走难免湿鞋'"
+  type: counter_example
+  source_chapter: "第一章 第4节 不做短期的投机"
+  source_quote: "不做短期的投机。有人说这件事我不指望赚钱，就当消费玩玩，一次一次这样就不聚焦了。常在河边走，难免会湿鞋，湿一回鞋子就会湿一辈子。变现容易，进出方便，是绝大多数人投资亏损的首因。"
+  summary: "短期的投机看似无害（'就玩玩'），但会逐渐侵蚀投资纪律。段永平指出，股市'变现容易、进出方便'这个特性本身就是多数人亏损的首要原因。"
+  failure_mode: "从'小赌怡情'开始，逐步加大投机力度，最终将大部分资金投入短期交易。偶尔的盈利强化投机行为，长期下来总体亏损。"
+  mechanism: "投机具有成瘾性——每次小赌都会激活奖励机制，让人逐渐对短期价格波动上瘾。投机者把注意力从公司价值转移到股价走势上，本质上是把投资变成了赌博。段永平说'投机者就算很聪明早晚还是会掉坑里的'。"
+  warning_signs:
+    - "觉得'小玩玩没关系'"
+    - "关注短期股价波动多过关注公司经营"
+    - "频繁查看行情"
+  bound_to: ["stop-doing-list", "investment-psychology"]
+  tags: [counter-example, short-term-speculation, addiction, discipline-erosion]
+
+- id: ce-007
+  title: "追涨买入——'最荒唐的买入理由'"
+  type: counter_example
+  source_chapter: "第一章 第4节 不做不懂的东西"
+  source_quote: "买自己不懂的东西是为什么85%的人可以在牛市熊市都亏钱的原因。没有比因为股票涨了很多而买入更荒唐的理由了。"
+  summary: "因为股票涨了就买入是最常见的非理性投资行为。段永平称之为'最荒唐的理由'。牛市中追涨的人，到了熊市同样会因为恐慌而割肉，牛市熊市都在亏钱。"
+  failure_mode: "看到股价持续上涨产生FOMO心理，在高位买入自己并不理解的股票。买入后股价回调时无法判断是正常波动还是趋势反转，在恐慌中卖出，完成一次'高买低卖'。"
+  mechanism: "人脑对'正在上涨'的信号有天然的追逐倾向（进化心理学的从众本能）。股价上涨时媒体和社交圈会强化买入信号，形成正反馈循环。但上涨本身与公司价值无关，纯粹是价格信号驱动的行为。"
+  warning_signs:
+    - "买入原因是'它一直在涨'"
+    - "害怕'再不买就来不及了'"
+    - "买入时说不清公司未来5年的盈利能力"
+  bound_to: ["enterprise-owner-mindset", "competence-circle-framework"]
+  tags: [counter-example, chase-rally, FOMO, most-absurd-reason]
+
+- id: ce-008
+  title: "知行不一——'口里喊着价值投资实际东张西望'"
+  type: counter_example
+  source_chapter: "第二章 第3节 价值投资难吗"
+  source_quote: "其实我倒是觉得最危险的是口里喊着价值投资，但实际上却老是在东张西望的'投资人'。当你也不知道你要买的东西到底是什么的时候，那可确实有点难了，那种时候就会东张西望地看别人的反应。"
+  summary: "段永平认为最危险的投资者不是不懂价值投资的人，而是'口里喊着价值投资但实际东张西望'的人——他们知道正确理念但无法真正内化，在关键时刻仍被市场情绪左右。"
+  failure_mode: "买入时自称价值投资者，但股价下跌时恐慌卖出，上涨时又急于获利了结。名义上长期持有，实际上心态完全受市场影响，最终结果与投机者无异。"
+  mechanism: "知道道理和从骨子里相信是两回事。'买股票就是买公司'这句话会说的人非常多，但段永平说他认识的人中骨子里真正理解并相信的不超过5个。大部分人的'理解'停留在认知层面，没有转化为行为层面的自动反应。"
+  warning_signs:
+    - "自称价值投资者但频繁查看股价"
+    - "买入后关心别人怎么看"
+    - "道理都懂，但一到实战就做反"
+  bound_to: ["enterprise-owner-mindset", "investment-psychology"]
+  tags: [counter-example, knowing-doing-gap, self-deception, cognitive-dissonance]
+
+- id: ce-009
+  title: "以为看懂实际没懂——'我们不知道我们不知道什么'"
+  type: counter_example
+  source_chapter: "第一章 第4节 不做不懂的东西"
+  source_quote: "有时候经常看起来似是而非，你觉得懂了，实际上有些东西还没有搞懂。就是说我们叫做we do not know what we do not know，就是我们不知道我们不知道什么，以为自己知道了，其实呢还不知道，所以等到发现的时候已经有点晚了。"
+  summary: "段永平坦承自己多次犯过'以为看懂实际没懂'的错误——买入航空公司FRNT（巴菲特已警告过要小心）、买入天然气ETFUNG等。这类错误的可怕之处在于投资者自认为在能力圈内操作，实际已越界。"
+  failure_mode: "投资者研究了公司的一些信息后认为自己理解了其商业模式，买入后才发现遗漏了关键风险因素（如航空公司的资金链脆弱性、ETF的跟踪误差等），此时已经亏损。"
+  mechanism: "人类的认知系统倾向于过早关闭不确定性的思考——一旦形成'我懂了'的判断，就会停止寻找反面证据。经营企业的经验反而可能让人过度自信，以为可以快速理解其他行业的公司。段永平说'我经常看到有人跑到自己的能力圈以外去做事情'。"
+  warning_signs:
+    - "研究公司的时间不到一年就决定买入"
+    - "买入决策基于一两个亮点而非全面分析"
+    - "无法列出公司至少三个可能出问题的风险点"
+  bound_to: ["competence-circle-framework", "good-business-identifier"]
+  tags: [counter-example, illusion-of-understanding, dunning-kruger, blind-spot]
+
+- id: ce-010
+  title: "赌徒式回本心态——'等到回本再说'"
+  type: counter_example
+  source_chapter: "第一章 第3节 做对的事情，把事情做对"
+  source_quote: "发现买错了股票或公司就应该赶紧离开，不然越到后面损失会越大，但大部分人往往会希望等到回本再说。"
+  summary: "买入后亏损时，大多数人的本能反应是'等回本再卖'，而不是理性判断是否应该止损。段永平强调'发现错误马上改，不管多大的代价都是最小的代价'，但沉入成本的心理让人无法执行。"
+  failure_mode: "投资者发现买错了股票，但因为已经亏损而不愿卖出。随着时间推移亏损持续扩大，机会成本也在累积（本可以卖掉后买入更好的公司）。"
+  mechanism: "沉入成本谬误（sunk cost fallacy）——人脑倾向于把已经投入的金钱视为'不可放弃的投资'，导致在错误的道路上越走越远。'等回本'的潜台词是把决策基准从'这个公司值不值得持有'转移到了'我能不能不亏'，这是完全不同的判断标准。"
+  warning_signs:
+    - "卖出决策以'是否回本'为标准"
+    - "不愿查看亏损持仓的具体情况"
+    - "用'长期投资'来合理化本应止损的亏损"
+  bound_to: ["opportunity-cost-framework", "stop-doing-list"]
+  tags: [counter-example, sunk-cost, breakeven-fallacy, loss-aversion]
+
+- id: ce-011
+  title: "被PE误导——把历史数据当未来判断"
+  type: counter_example
+  source_chapter: "第五章 第4节 对市盈率（PE）的看法"
+  source_quote: "千万不要被pe误导，因为pe是个历史数据，未必能说明未来。PE是历史数据的意思是你不能单靠PE去推测公司未来的收益。pe是个历史数据，能说明一点问题但不是全部。"
+  summary: "投资者最容易犯的估值错误就是直接用当前PE判断公司贵不贵。段永平反复强调PE是历史数据，低PE不代表便宜（可能盈利正在下滑），高PE不代表贵（可能盈利即将爆发）。"
+  failure_mode: "看到低PE就认为是好价格，忽略公司盈利能力可能在恶化；看到高PE就认为太贵，错过盈利正在高速增长的公司。用PE做买卖决策本质上是在用过去预测未来。"
+  mechanism: "PE的计算（价格/每股收益）中，分子（价格）反映的是市场对未来的预期，分母（每股收益）是过去的数据。两者时间维度不匹配。低PE公司可能是价值陷阱（盈利即将消失），高PE公司可能正在经历爆发式增长。"
+  warning_signs:
+    - "买入理由主要是'PE很低'"
+    - "不分析公司盈利的可持续性就看PE"
+    - "用PE横向比较不同行业的公司"
+  bound_to: ["dcf-thinking-valuation", "good-business-identifier"]
+  tags: [counter-example, PE-trap, historical-data-bias, valuation-error]
+
+- id: ce-012
+  title: "走捷径——'弯道超车总会被反超'"
+  type: counter_example
+  source_chapter: "第一章 第4节 不要走捷径（fast is slow）"
+  source_quote: "不要走捷径，不要相信弯道超车。弯道超车是不开车和不坐车的人说的，总会被反超的。不存在什么捷径。不存在什么窍门。如果你想走轻松的路，我保证：它比艰难的路更长更痛苦。"
+  summary: "段永平认为价值投资是唯一的投资正道，不存在捷径。试图寻找捷径（量化模型、技术分析、内幕消息等）的人最终会走更多弯路。他说'可惜很多人都是非要试过别的路才会醒悟过来的'。"
+  failure_mode: "投资者不断尝试各种'更快'的方法——技术分析、量化策略、跟单操作等——每尝试一种新方法就花大量时间精力，最终发现都不如老老实实研究公司。"
+  mechanism: "人性的即时满足倾向让人难以接受'慢慢变富'。看到别人用某种方法短期赚了大钱，就相信自己也能复制。但短期成功往往是运气而非方法（巴菲特的'掷硬币比赛'比喻）。段永平说'想赌运气的人还不如去买彩票'。"
+  warning_signs:
+    - "频繁更换投资策略"
+    - "花大量时间研究'方法'而非研究'公司'"
+    - "相信存在某种公式或模型可以持续赚钱"
+  bound_to: ["stop-doing-list", "enterprise-owner-mindset"]
+  tags: [counter-example, shortcut-seeking, fast-is-slow, instant-gratification]
+
+- id: ce-013
+  title: "长期持有不等于价值投资——'被套了才想起长线'"
+  type: counter_example
+  source_chapter: "第二章 第5节 封仓十年的选择 · 对长期投资的误解"
+  source_quote: "价值投资就应该长期持有的说法是对价值投资的误解。误解最大的无过于'长期持有就是价值投资'了。有很多人往往只是在'被套'的时候才想起'长线'来。这里'被套'的意思是指有些人本来只打算拿10天的股票，结果因为'亏钱'了而决定改为拿10年。"
+  summary: "段永平认为最常见的价值投资误区就是把'长期持有'等同于价值投资。很多人是亏损后才把'短线'改为'长线'，用'价值投资'为自己的错误决策辩护。"
+  failure_mode: "买入前没有深入研究公司，亏损后不愿止损，转而以'长期持有'自居。这种'伪长期投资'不是基于对公司未来10年的信心，而是基于不愿面对亏损的心理防御。"
+  mechanism: "认知失调的心理防御——当现实（亏损）与自我认知（聪明投资者）冲突时，人脑会自动重构叙事：从'我判断错了'变成'我是长期投资者'。这种自我欺骗导致在错误的标的上越陷越深。段永平说'最危险的可能是一知半解的那种'。"
+  warning_signs:
+    - "买入时是短线思路，亏损后才变成'长期投资'"
+    - "用'巴菲特也是长期持有'来安慰亏损"
+    - "长期持有但说不出10年后公司会怎么样"
+  bound_to: ["enterprise-owner-mindset", "dcf-thinking-valuation"]
+  tags: [counter-example, fake-long-term, cognitive-dissonance, value-trap]
+
+- id: ce-014
+  title: "成功者膨胀——'飘飘然后做蠢事'"
+  type: counter_example
+  source_chapter: "第一章 第4节 Stop doing list · 不做空"
+  source_quote: "之前投资表现非常好，有点飘飘然，真以为自己很厉害。开始还是想小玩玩，后来又不服输。很多年前在VCD年代，拉斯维加斯CES期间，酒店赌场里见到很多同行朋友在贵宾厅玩，经常看到小铲子一铲就是几万美金。"
+  summary: "投资成功后产生过度自信，是段永平做空百度亏损1.5-2亿美金的直接心理原因。他坦承当时'飘飘然，真以为自己很厉害'。长期资本管理公司（两位诺贝尔奖获得者的梦幻团队）也是因为过度自信加杠杆而灭顶。"
+  failure_mode: "经历一段时间的投资成功后，自信心膨胀到不承认自己还有能力圈限制，开始涉足做空、杠杆、不熟悉的领域等以前不会触碰的危险行为。"
+  mechanism: "成功会强化'我比别人聪明'的自我认知，让人忽视运气在成功中的占比（巴菲特'掷硬币比赛'寓言的核心）。段永平说'聪明人知道如何把事情做对，但有智慧指的是要做对的事情。投机投的是零和游戏，投资投的是企业带来的利润。所以投资不需要那么聪明就可以了，而投机者就算很聪明早晚还是会掉坑里的'。"
+  warning_signs:
+    - "连续盈利后觉得自己可以挑战更难的操作"
+    - "开始觉得自己比巴菲特'更灵活'"
+    - "对以前恪守的纪律产生'我可以超越'的想法"
+  bound_to: ["stop-doing-list", "investment-psychology"]
+  tags: [counter-example, overconfidence, hubris, success-induced-failure]

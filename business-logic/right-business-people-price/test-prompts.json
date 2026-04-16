@@ -1,0 +1,87 @@
+{
+  "skill": "right-business-people-price",
+  "version": "0.1.0",
+  "source_book": "《段永平投资问答录-上（商业逻辑篇）》— 段永平",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "st-001",
+      "type": "should_trigger",
+      "prompt": "我最近在研究一家公司，商业模式看起来不错，管理层也很优秀，但现在的市盈率已经50倍了，这种好公司但价格贵的情况值得买入吗？",
+      "expected_behavior": "应激活 right-business-people-price, 并用三要素框架帮用户分析：Right Business 和 Right People 都对的情况下，Price 相对不重要，时间会站在好生意这边，但也要确认不是极端贵。",
+      "tags": ["好公司价格贵", "投资决策", "三要素评估"]
+    },
+    {
+      "id": "st-002",
+      "type": "should_trigger",
+      "prompt": "投资最重要的是什么？我刚开始学习价值投资，想建立一个系统的分析框架",
+      "expected_behavior": "应激活 right-business-people-price, 并系统讲解 Right Business > Right People > Right Price 的优先级框架和判断逻辑。",
+      "tags": ["投资最重要的是什么", "投资框架", "初学者"]
+    },
+    {
+      "id": "st-003",
+      "type": "should_trigger",
+      "prompt": "我在比较茅台和五粮液，不知道该买哪一个，能帮我分析一下吗？",
+      "expected_behavior": "应激活 right-business-people-price, 引导用户从商业模式、企业文化、价格三个维度逐一比较两家公司，优先看 Right Business。",
+      "tags": ["比较投资标的", "选股票", "买入决策"]
+    },
+    {
+      "id": "st-004",
+      "type": "should_trigger",
+      "prompt": "这家公司CEO我很喜欢，很诚信也很有能力，但做的是一个没有护城河的生意，值得投吗？",
+      "expected_behavior": "应激活 right-business-people-price, 并明确指出 Right People 不能弥补 Right Business 的不足——'再好的车手也很难开好一辆烂车'，判停条件是商业模式不好则直接放弃。",
+      "tags": ["好CEO烂生意", "优先级判断", "判停条件"]
+    },
+    {
+      "id": "st-005",
+      "type": "should_trigger",
+      "prompt": "我现在手上有一些闲钱，想买股票长期持有，应该怎么选？什么时候买入合适？",
+      "expected_behavior": "应激活 right-business-people-price, 用三要素框架引导选股思路，并说明买入时机——三个维度大致满足时'该出手时就出手'。",
+      "tags": ["怎么选股票", "什么时候买入", "长期持有"]
+    },
+    {
+      "id": "snt-001",
+      "type": "should_not_trigger",
+      "prompt": "这只股票的MACD刚刚金叉，KDJ也超卖了，你觉得接下来一周会涨还是会跌？",
+      "expected_behavior": "不应激活, 这是典型的技术分析/短线交易场景，与三要素长期投资框架完全不同。",
+      "tags": ["技术分析", "短线交易", "MACD金叉"]
+    },
+    {
+      "id": "snt-002",
+      "type": "should_not_trigger",
+      "prompt": "帮我建一个DCF模型，把未来10年的自由现金流折现算一下这家公司的内在价值",
+      "expected_behavior": "不应激活, 这是纯财务建模需求，用户只是需要一个计算工具，不需要投资框架指导。",
+      "tags": ["DCF模型", "纯财务建模", "估值计算"]
+    },
+    {
+      "id": "snt-003",
+      "type": "should_not_trigger",
+      "prompt": "我想买一些国债和货币基金做资产配置，能推荐一下有哪些选择吗？",
+      "expected_behavior": "不应激活, 这是非股权类投资的资产配置问题，债券和货币基金的逻辑与股票投资的'买公司'框架不同。",
+      "tags": ["非股权投资", "债券", "货币基金", "资产配置"]
+    },
+    {
+      "id": "ec-001",
+      "type": "edge_case",
+      "prompt": "我想投资一个朋友的创业公司，他做的是餐饮生意，团队不错，开了两家店都盈利，现在想融资扩张，这个值得投吗？",
+      "expected_behavior": "可激活但应谨慎。场景符合'评估是否买入一家公司'的触发条件，三要素框架可以用于非上市公司的股权投资。但需注意段永平的框架主要针对上市公司，对于早期创业公司还需考虑更多因素（如市场验证阶段、团队完整性、退出机制等）。",
+      "tags": ["非上市公司投资", "创业公司", "朋友融资"]
+    },
+    {
+      "id": "ec-002",
+      "type": "edge_case",
+      "prompt": "我在考虑要不要买比特币，你觉得用价值投资的眼光看，它值得长期持有吗？",
+      "expected_behavior": "可激活但应明确边界。用户在问投资决策框架，但加密货币不产生现金流，无法用'Right Business'（商业模式）来评估，三要素框架不完全适用。应指出框架的局限性，并提醒用户加密货币不在段永平经验范围内。",
+      "tags": ["加密货币", "新兴资产", "框架局限"]
+    },
+    {
+      "id": "ec-003",
+      "type": "edge_case",
+      "prompt": "我看好新能源汽车行业，但不确定该买比亚迪还是特斯拉，它们都很贵，能帮我分析下吗？",
+      "expected_behavior": "应激活。这是典型的比较投资标的+好公司但价格贵的场景，三要素框架完全适用。但需注意新能源汽车行业变化快，'长期'判断的难度比消费行业更高。",
+      "tags": ["行业选择", "好公司贵", "比亚迪特斯拉"]
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "至少3条should_trigger+2条should_not_trigger+1条edge_case。全部should_not_trigger必须通过。Skill核心是投资三要素总纲（Right Business > Right People > Right Price），适用于股权类长期投资决策，不适用于短线交易、非股权投资、纯财务建模。"
+}

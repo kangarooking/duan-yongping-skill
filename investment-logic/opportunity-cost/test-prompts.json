@@ -1,0 +1,73 @@
+{
+  "skill": "opportunity-cost",
+  "version": "0.1.0",
+  "source_book": "段永平投资问答录-下 — 段永平",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我持有的腾讯已经涨了60%了，要不要止盈？我买入的时候是280，现在已经450了，感觉赚得差不多了。",
+      "expected_behavior": "应激活 opportunity-cost, 并引导用户用'持有=买入'的视角重新审视——假设今天手里拿着等额现金，还会按450的价格买入腾讯吗？剥离买入成本280这个锚定，聚焦机会成本比较。",
+      "notes": "典型止盈纠结场景：用户以浮盈比例和买入成本作为卖出依据，正是SKILL.md中'我已经赚了X%了，该不该止盈'的语言信号。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我手里有只股票被套了30%，现在发现另一家公司好像更好，但是亏着卖不甘心啊，换还是不换？",
+      "expected_behavior": "应激活 opportunity-cost, 并指出'亏着卖不甘心'是典型的沉没成本陷阱。引导用户忽略买入价，比较当前持有和替代选项在10年视角下的预期回报，用机会成本做决策。",
+      "notes": "典型换仓犹豫+止损纠结场景：用户以浮亏为锚、以不甘心为理由，正是SKILL.md中'这只股票还亏着，舍不得割肉'的语言信号。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "最近市场波动很大，我持仓的股票天天跌，卖了怕涨回来，不卖又怕继续跌，到底该怎么办？",
+      "expected_behavior": "应激活 opportunity-cost, 并引导用户从10年视角过滤短期波动焦虑。用'持有=按当前价格重新买入'的框架，判断当前价格下该股票是否仍是最好的选择，而非基于涨跌恐惧做决策。",
+      "notes": "典型持仓焦虑场景：用户因市场波动而恐惧，卖出理由完全基于价格波动而非公司价值，正是SKILL.md中'卖了怕涨、不卖怕跌'的语言信号。"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我买比亚迪的时候50块，现在300多了，涨了6倍。虽然觉得公司不错，但是这么高了是不是该落袋为安？",
+      "expected_behavior": "应激活 opportunity-cost, 并引导用户思考：卖出不应因为'涨了6倍'，而应因为'找到了比当前价格的比亚迪更好的替代标的'。要求用户评估按当前300多价格是否还愿意买入。",
+      "notes": "止盈纠结的变种：用户虽然承认公司不错，但'落袋为安'的思维暴露了以浮盈比例为决策依据，而非机会成本比较。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想算一下茅台的内在价值，它的自由现金流增长率大概多少比较合理？用什么折现率合适？",
+      "expected_behavior": "不应激活本 skill, 因为用户在做纯粹的估值计算，不涉及买卖决策纠结。这是 dcf-valuation 的场景，不是机会成本决策框架的场景。",
+      "notes": "诱饵: DCF估值场景。用户关心'这家公司值多少钱'而非'要不要卖/换'，属于SKILL.md边界中明确排除的纯估值计算。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想做短线交易，这只股票今天放量突破了，要不要追进去做个波段？",
+      "expected_behavior": "不应激活本 skill, 因为用户的目标是短期波段操作。本框架假设10年视角，不适用于短期交易决策。",
+      "notes": "诱饵: 短期交易决策。SKILL.md边界明确指出'纯粹的短期交易决策'不应使用本skill，框架假设10年视角。"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我最近因为股票亏了很多钱，心情很低落，吃不好睡不好，投资太难了，我该怎么办？",
+      "expected_behavior": "不应激活本 skill, 因为用户的核心需求是情绪安抚而非决策逻辑分析。这是 equanimity-mindset 的场景。本skill管决策逻辑，不管情绪管理。",
+      "notes": "诱饵: 情绪安抚场景。SKILL.md明确区分了本skill与equanimity-mindset——平常心skill管情绪管理，本skill管决策逻辑。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我想了解一下苹果这家公司到底好不好，值不值得投资。我目前没有持仓，但考虑买入。",
+      "expected_behavior": "不应激活本 skill。用户还没有持仓，不存在'要不要卖/换/止盈/止损'的纠结，这是判断公司好坏的场景。应引导至 good-business 或 capability-circle skill。但如果用户追问'我现在的持仓A和想买的苹果相比，该选哪个'，则应激活本skill做机会成本比较。",
+      "notes": "边界: 用户处于买入决策阶段而非卖出/换仓纠结阶段。SKILL.md的触发场景是'要不要卖/换/止盈/止损'，纯买入判断不在核心场景内。但如果后续对话演变为'持有A还是换B'的资产配置比较，则进入触发范围。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我持有的中石油亏了40%，我觉得它是被错杀的，我准备越跌越买，摊低成本，这样回本更快。",
+      "expected_behavior": "应激活本 skill, 但需要明确警告用户这是SKILL.md中列出的失败模式——'摊低成本'是沉没成本陷阱的伪装，而非机会成本思维。应引导用户思考：当前价格下中石油是否是最好的选择？如果不是，加仓的决策就是错的，与成本均价无关。",
+      "notes": "边界: 用户用'越跌越买摊低成本'的决策方式，看似在做买卖决策，但逻辑基础是沉没成本（降低平均买入价）而非机会成本（当前价格下是否最优选择）。SKILL.md明确将此列为'容易混淆的邻近方法论'，需要纠正而非放任。"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "至少 3 条 should_trigger + 2 条 should_not_trigger + 1 条 edge_case。全部 should_not_trigger 必须通过 (诱饵容错为 0)。"
+}

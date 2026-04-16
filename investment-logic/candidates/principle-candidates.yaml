@@ -1,0 +1,246 @@
+# principle-candidates.yaml
+# 段永平投资问答录-下（投资逻辑篇）— 原则/清单/规则/格言 提取结果
+# 由 principle-extractor 产出, 待阶段 1.5 三重验证
+
+- id: p01
+  title: Stop Doing List（不做清单）
+  type: checklist
+  source_chapter: 第 1 部分 · 投资理念 / 第 2 部分 · 投资理解 / 第 6 章 · 投资方法论
+  source_quote: |
+    "老调重弹：不做空、不margin，不做不懂的东西。什么时候明白都不晚。"
+  summary: |
+    投资的第一道防线是明确"不做什么"：不做空、不用保证金、不做不懂的东西。
+    这比"做什么"更重要，因为一次致命错误就可能摧毁所有积累。
+    贯穿全书反复出现的核心纪律，段永平称之为"stop doing list"。
+  tags: [principle, checklist, risk-management, negative-rule]
+
+- id: p02
+  title: 买股票就是买公司
+  type: principle
+  source_chapter: 第 1 部分 · 投资理念 / 第 5 章 · 估值逻辑
+  source_quote: |
+    "买股票就是买公司，买公司就是买其未来现金流（的折现）。"
+  summary: |
+    投资的唯一正确出发点：以企业所有者视角看待每一笔股票交易。
+    判断标准是"如果这家公司不是上市公司，这个价钱你还买不买"。
+    这是价值投资的公理，所有后续原则都由此推导。
+  tags: [principle, core-belief, ownership-mindset]
+
+- id: p03
+  title: 不懂不碰
+  type: principle
+  source_chapter: 第 1 部分 · 投资理念 / 第 2 部分 · 投资理解
+  source_quote: |
+    "不懂不做，至少85%的人不适合投资。"
+  summary: |
+    能力圈原则的操作版本：不在你真正理解的商业模式之外投资。
+    "懂"的标志是能判断公司未来5-10年的盈利能力，而非"听说过这个行业"。
+    超出能力圈就意味着投机，而投机的长期结果大概率是亏钱。
+  tags: [principle, capability-circle, risk-management]
+
+- id: p04
+  title: 不做空、不用保证金
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 投机方式
+  source_quote: |
+    "不做空、不用margin，不做不懂的东西。巴菲特说过，他有很多很厉害的朋友最后都破产了，原因就是因为用了margin。"
+  summary: |
+    做空和用杠杆是投资中仅有的可能导致"归零"的行为。
+    做空面对无限风险（股价可以无限上涨），杠杆在市场波动时可能被强制平仓。
+    这是巴菲特和段永平一致认为的绝对禁止事项，没有例外。
+  tags: [principle, absolute-prohibition, risk-management]
+
+- id: p05
+  title: 发现错误马上改
+  type: principle
+  source_chapter: 第 1 部分 · 投资理念
+  source_quote: |
+    "发现错误马上改，不管多大的代价都是最小的代价。"
+  summary: |
+    投资中犯错是必然的，关键是发现错误后的处理速度。
+    沉没成本不应成为继续持有错误投资的理由。
+    越早止损，总损失越小——这是防止小错变大错的铁律。
+  tags: [principle, error-correction, sunk-cost]
+
+- id: p06
+  title: 不走捷径（快即是慢）
+  type: maxim
+  source_chapter: 第 1 部分 · 投资理念
+  source_quote: |
+    "fast is slow。投资里没有什么捷径，不存在什么捷径。"
+  summary: |
+    投资的收益来自长期复利，任何试图加速的行为（短线、杠杆、频繁交易）
+    都是在增加风险而非增加回报。最快的路径往往是最慢的，
+    而看起来最慢的"买入好公司并持有"反而是最快的致富路径。
+  tags: [maxim, patience, long-term-thinking]
+
+- id: p07
+  title: 10年持有思维
+  type: principle
+  source_chapter: 第 2 部分 · 投资理解 / 第 5 章 · 估值逻辑
+  source_quote: |
+    "不打算拿10年的股票就不应该拿10天。"
+  summary: |
+    买入前必须问自己：10年后这家公司是否还是一家好公司？
+    如果答案是肯定的，短期波动就不是风险而是机会。
+    这个思维框架同时是选股标准和持有纪律，过滤掉大量短期投机冲动。
+  tags: [principle, holding-discipline, long-term-thinking]
+
+- id: p08
+  title: 未来现金流折现是思维方式而非公式
+  type: principle
+  source_chapter: 第 5 章 · 估值逻辑
+  source_quote: |
+    "未来现金流折现指的是一种思维方式，想用公式的请到学校去用哈。"
+  summary: |
+    DCF不是计算模型，而是思考企业价值的认知框架。
+    用公式计算的人往往"陷于细节而忽略整体"。
+    真正的估值是"毛估估"——大致一看就知道是否便宜，
+    如果需要计算器才能算出来，那说明不够便宜。
+  tags: [principle, valuation, thinking-framework]
+
+- id: p09
+  title: 卖股票和成本无关
+  type: principle
+  source_chapter: 第 5 章 · 估值逻辑 · 什么时候买卖股票
+  source_quote: |
+    "无论什么时候卖都不要和买的成本联系起来。该卖的理由可能有很多，唯一不该用的理由就是'我已经赚钱了'。"
+  summary: |
+    卖出决策的唯一标准是公司的内在价值，与买入价格完全无关。
+    同理，买入决策也不应参考股票"曾经到过什么价"。
+    将成本纳入决策是投机思维的特征，会导致"该卖不卖"或"过早卖出好公司"。
+  tags: [principle, sell-discipline, rationality]
+
+- id: p10
+  title: 集中投资——投的企业越多赚的越少
+  type: principle
+  source_chapter: 第 2 部分 · 投资理解
+  source_quote: |
+    "绝对的集中。分散是理财不是投资。投的企业越多赚的越少。"
+  summary: |
+    对自己真正理解的公司应该集中投资，分散化是"对无知的保护"。
+    一辈子做20个投资决策就足够了，真正的好机会非常稀少。
+    集中的前提是真正理解所投公司的商业模式和未来前景。
+  tags: [principle, portfolio-concentration, conviction]
+
+- id: p11
+  title: 先看商业模式再考虑其他
+  type: principle
+  source_chapter: 第 2 部分 · 投资理解 / 第 7 章 · 案例分析
+  source_quote: |
+    "投资最重要的还是要看生意模式，不然的话大家就很容易只见树木不见森林。"
+  summary: |
+    分析一家公司的第一步是看其商业模式是否具有持久竞争优势。
+    财务数据、管理团队、估值都是次要的验证维度。
+    好的商业模式能经受住管理失误、经济衰退等各种冲击。
+  tags: [principle, business-model, analysis-priority]
+
+- id: p12
+  title: 不预测宏观——用10年眼光看企业
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 如何看待宏观
+  source_quote: |
+    "你如果能用10年的眼光看企业你就明白了（为什么买卖股票不应基于宏观经济的预测）。"
+  summary: |
+    宏观经济在短期内对公司有影响，但从5-10年角度看影响远比想象的小。
+    经济学家鲜有成为投资大家的，说明宏观预测对投资帮助有限。
+    投资者应专注公司本身，忽略短期宏观波动和新闻噪音。
+  tags: [principle, macro-irrelevance, focus]
+
+- id: p13
+  title: 机会成本是所有买卖决策的核心标准
+  type: principle
+  source_chapter: 第 5 章 · 估值逻辑 · 机会成本
+  source_quote: |
+    "持有等于买入是个事实，不是观点。买入等于持有。"
+  summary: |
+    每个投资决策都应与"目前最好的替代选项"比较。
+    "持有=买入"意味着每一天你都在做投资决策——
+    今天的价格你还愿不愿意持有？如果不愿意，为什么不卖？
+    这个框架统一了买入、持有、卖出三个决策的逻辑。
+  tags: [principle, opportunity-cost, decision-framework]
+
+- id: p14
+  title: 平常心——关注本质而非价格
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 投资心态
+  source_quote: |
+    "芒格认为理性最重要。我们认为平常心最重要。好像这俩是一个东西。"
+  summary: |
+    平常心不是"淡定"，而是基于深入理解后的理性状态。
+    如果你真正理解所投公司，股价下跌不会恐惧，上涨不会贪婪。
+    不用闲钱投资就无法保持平常心；关注本质自然就有平常心。
+  tags: [principle, mindset, rationality]
+
+- id: p15
+  title: 投资用闲钱
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 投资心态
+  source_quote: |
+    "投资用的是闲钱，不然就是投机了。至少你要有用闲钱的态度才可能有平常心的。"
+  summary: |
+    投资资金必须是"亏完也不影响生活"的闲钱。
+    用短期要用的钱投资会导致恐惧和冲动决策。
+    这是保持平常心的物质前提，没有这个前提其他原则都难以执行。
+  tags: [principle, capital-management, mindset]
+
+- id: p16
+  title: 看不懂的再便宜也别碰
+  type: principle
+  source_chapter: 第 5 章 · 估值逻辑 / 第 6 章 · 投资方法论
+  source_quote: |
+    "市盈率是倒后镜，不能作为能不能投的标准。关键是未来的盈利能力，看不懂的再低也别碰。"
+  summary: |
+    便宜不是买入的充分理由——必须先看懂公司，再谈价格。
+    PE极低的公司很可能是有问题的公司（如破产前的通用汽车）。
+    在能力圈外买入"看起来便宜"的股票是最常见的价值陷阱。
+  tags: [principle, capability-circle, valuation-trap]
+
+- id: p17
+  title: 慢慢变富——不追求暴利
+  type: maxim
+  source_chapter: 第 6 章 · 投资方法论 · 投资心态
+  source_quote: |
+    "作为业余投资者，我觉得12%的复合增长就不错了。有这个心态，加上漫长的过程中可能会碰到的大机会，实际超过15%或更多也是可能的。"
+  summary: |
+    设定合理的回报预期（8-12%年化），不追求暴利。
+    追求高回报率会让人铤而走险（用杠杆、投机等），反而亏钱。
+    12%的复合增长40年就是93倍——慢即是快。
+  tags: [maxim, return-expectation, patience]
+
+- id: p18
+  title: 守正不出奇——不做投机取巧的事
+  type: principle
+  source_chapter: 第 1 部分 · 投资理念 / 第 6 章 · 投资方法论
+  source_quote: |
+    "投资不需要勇气。投资做的是'两块钱的东西，一块钱卖给你'的生意，这不需要任何勇气。需要勇气的都是投机。"
+  summary: |
+    真正的投资决策应该像"买打折商品"一样自然，不需要勇气或冒险。
+    如果一笔投资需要"勇气"，说明你对标的不够了解或在投机。
+    不追求"出奇制胜"，而是踏踏实实地在能力圈内做确定性高的决策。
+  tags: [principle, discipline, anti-speculation]
+
+- id: p19
+  title: 不看图不看线不看盘
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 看图看线
+  source_quote: |
+    "我不看图不看线不看盘。所谓的价值投资者的心中是无图无线的。"
+  summary: |
+    K线图、技术指标反映的是"别人现在怎么看"，和公司价值无关。
+    看图看线有50%的准确率，唯一的问题是无法事先知道哪次是对的。
+    价值投资者应该关注生意本身，而非股价的短期走势。
+  tags: [principle, anti-technical-analysis, focus]
+
+- id: p20
+  title: 满仓好公司时下跌与你无关
+  type: principle
+  source_chapter: 第 6 章 · 投资方法论 · 投资心态
+  source_quote: |
+    "如果你只有一只股票，而且还是满仓的，如果你真正了解你投资的东西的话，那下跌就和你无关了。"
+  summary: |
+    真正理解的公司，股价下跌不是风险而是加仓机会。
+    投资者看到下跌开心（可以买更便宜），投机者看到下跌恐慌。
+    这个原则是检验自己是否真正"看懂"一个公司的试金石：
+    如果下跌让你焦虑，说明你可能在投机。
+  tags: [principle, mindset, self-test]

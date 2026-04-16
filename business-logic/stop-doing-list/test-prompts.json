@@ -1,0 +1,87 @@
+{
+  "skill": "stop-doing-list",
+  "version": "0.1.0",
+  "source_book": "段永平投资问答录-上（商业逻辑篇）— 段永平",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我们公司今年机会很多，有好几个方向都想试试，但又怕什么都做反而什么都做不好，怎么筛选",
+      "expected_behavior": "应激活 stop-doing-list。用户面临机会众多的战略选择困境，核心需求是建立排除标准。帮助用户从使命愿景出发，建立'不为清单'来筛选机会，而非逐个评估每个机会的优劣",
+      "notes": "正面场景：战略层面的机会筛选，语言信号匹配'机会很多''都想试试'——典型的需要Stop Doing List来定义边界的情境"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "公司这两年增长太快了，团队从50人扩到200人，业务线也开了好几条，我总担心哪里会出致命问题，怎么预防",
+      "expected_behavior": "应激活 stop-doing-list。用户公司高速扩张带来失控风险，需要建立'不做的事情'红线来防止致命错误。帮助用户建立普世禁忌和使命绑定的两类不为清单，并设置纠错机制",
+      "notes": "正面场景：发展太快担心失控，语言信号匹配'发展太快''担心致命问题'——Stop Doing List的核心使用场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "我们发现之前进入的一个业务方向可能判断错了，但已经投了几千万进去了，团队也很努力，现在该怎么办",
+      "expected_behavior": "应激活 stop-doing-list。用户陷入沉没成本陷阱，需要用'发现错了立刻停，不管多大代价都是最小代价'的原则来决策。帮助用户建立纠错机制，而非纠结于已投入的成本",
+      "notes": "正面场景：已投入但方向可能错误，语言信号匹配'已经投了''团队也很努力'——典型的沉没成本陷阱，需要Stop Doing List的纠错机制"
+    },
+    {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "有个大客户提出要让我们做代工，利润很可观，但跟我自己的品牌定位有冲突，我该怎么想这个问题",
+      "expected_behavior": "应激活 stop-doing-list。用户面临一个'看起来很好但有隐忧'的机会，需要用'10年回头看'验证法和使命绑定的Stop Doing List来判断。参考段永平拒绝沃尔玛OEM订单的经典案例",
+      "notes": "正面场景：短期诱惑vs长期战略的冲突，语言信号匹配'利润可观''品牌定位有冲突'——需要用不为清单来做排除判断"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "为什么有些公司能活几十年甚至上百年，而有些公司火了一阵就消失了？背后的规律是什么",
+      "expected_behavior": "应激活 stop-doing-list。用户在思考企业长寿的底层规律，Stop Doing List的累积效应（坚持10-20年与不做清单的对手差距巨大）正是核心答案之一。帮助用户理解'不做什么比做什么更重要'的战略逻辑",
+      "notes": "正面场景：思考基业长青的规律，语言信号匹配'为什么有些公司能活很久'——Stop Doing List的哲学层面讨论"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我整理一下下周要完成的工作任务清单，按优先级排一下序",
+      "expected_behavior": "不应激活本 skill，因为这是日常任务规划和待办清单管理，属于执行层面的'要做清单'，与Stop Doing List的战略层面'不为清单'完全不同",
+      "notes": "诱饵：包含'清单'关键词，但本质是日常任务管理的要做清单（to-do list），不是战略层面的不为清单（stop doing list）"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "段永平的Stop Doing List是什么意思？能给我解释一下这个概念吗",
+      "expected_behavior": "不应激活本 skill，因为这是纯概念查询，用户只是想了解什么是Stop Doing List，并没有面对实际的战略决策或经营困境需要操作化",
+      "notes": "诱饵：关键词完全匹配'Stop Doing List'，但意图是信息查询/概念学习，不需要实际建立不为清单"
+    },
+    {
+      "id": "should-not-trigger-03",
+      "type": "should_not_trigger",
+      "prompt": "我们团队这个季度要完成三个项目，帮我做个项目排期和资源分配方案",
+      "expected_behavior": "不应激活本 skill，因为这是项目管理和资源分配的执行问题，方向已定只需要规划怎么做，不涉及'该不该做'的战略排除",
+      "notes": "诱饵：看似在规划，但本质是执行层面的项目排期，方向已经确定（三个项目），需要的是方法论而非战略排除框架"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我们是个初创公司，融资到了A轮，投资人建议我们快速扩张，但我觉得应该先把一个市场做透，你怎么看",
+      "expected_behavior": "可以激活。用户面临战略选择（扩张vs聚焦），涉及'不做什么'的决策。但需注意B段警告：段永平的Stop Doing List建立在企业已有盈利能力基础上，对初创企业可能需要适当变通。帮助用户建立适合早期阶段的简化版不为清单",
+      "notes": "边界：战略层面的方向选择（该触发），但初创公司的资源约束和生存压力可能需要对经典框架做变通（B段提到的时代局限）"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我个人的职业发展也是什么都想学，学了编程又想学设计，学了投资又想学创业，是不是也该列个不做清单",
+      "expected_behavior": "可以激活。用户在个人层面应用Stop Doing List思维，虽然原框架主要针对企业经营，但'不做什么比做什么更重要'的原则可以迁移到个人战略。帮助用户建立个人版的不为清单，但需提醒这是框架迁移而非原始场景",
+      "notes": "边界：个人发展而非企业经营，但核心决策逻辑（机会筛选+战略排除）一致。属于Stop Doing List思维的个人场景迁移"
+    },
+    {
+      "id": "edge-03",
+      "type": "edge_case",
+      "prompt": "公司要做年度战略规划，老板让我列一份明年的'不做清单'，我该怎么下手",
+      "expected_behavior": "可以激活。用户需要实际建立不为清单（核心场景），但需注意B段警告'清单太长会束缚手脚'——不是每件事都要列。帮助用户区分哪些应该列入战略层面的Stop Doing List，哪些只是日常运营优化",
+      "notes": "边界：明确要建不做清单（强触发信号），但存在把清单做成待办事项反面或列得太长的风险，需要引导正确使用"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "至少3条should_trigger+2条should_not_trigger+1条edge_case。全部should_not_trigger必须通过。"
+}
