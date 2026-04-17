@@ -123,6 +123,20 @@ duan-yongping-skill/
 - [No Rules Rules Skill](https://github.com/kangarooking/no-rules-rules-skill) — 10 organizational design skills from Netflix's freedom and responsibility culture
 - [Cognitive Dividend Skill](https://github.com/kangarooking/cognitive-dividend-skill) — 15 cognitive tool skills for thinking upgrades from *Cognitive Dividend*
 
+## About the Author
+
+**kangarooking** — AI blogger, indie developer. Creator of AI Top WeChat Official Account「袋鼠帝 AI 客栈」
+
+Volcengine Navigation KOL, Baidu Qianfan Developer Ambassador, GLM Evangelist, Trae Kunming's First Fellow
+
+| Platform | Link |
+|----------|------|
+| 𝕏 Twitter | https://x.com/aikangarooking |
+| Xiaohongshu | https://xhslink.com/m/5YejKvIDBbL |
+| Douyin | https://v.douyin.com/hYpsjphuuKc |
+| WeChat Official Account | 袋鼠帝 AI 客栈 |
+| WeChat Video Channel | AI 袋鼠帝 |
+
 ## License
 
 MIT. See [LICENSE](./LICENSE).
